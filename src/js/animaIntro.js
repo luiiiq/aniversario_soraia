@@ -1,7 +1,9 @@
 export function animaIntro() {
     const animacao = document.querySelector("#animacao");
+    const abertura = document.querySelector(".abertura");
     const bolinha = document.querySelector(".bolinha");
     const imagemExpansao = document.querySelector(".imagemExpansao");
+    const videoIntro = document.querySelector(".videoIntro");
 
     window.addEventListener("load", () => {
         animacao.classList.add("iniciar");
@@ -28,5 +30,16 @@ export function animaIntro() {
         }
 
     }, { once: true });
+
+    imagemExpansao.addEventListener("animationend", (evento) => {
+        if (evento.animationName === "sequenciaFrase") {
+            setTimeout(() => {
+                videoIntro.style.display = "block";
+                animacao.style.display = "none";
+                abertura.style.display = "none";
+                imagemExpansao.style.display = "none";
+            }, 1000);
+        };
+    });
 
 };
