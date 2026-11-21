@@ -1,0 +1,61 @@
+.fraseWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.fraseDigitar {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    top: 50%;
+
+    background: var(--cor-titulo);
+    background-clip: text;
+    color: transparent;
+
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    opacity: 0;
+    animation: sequenciaFrase 2.7s steps(25) forwards;
+    animation-play-state: paused;
+}
+
+.imagemExpansao.iniciarFrase .fraseDigitar {
+    animation-play-state: running;
+}
+
+@keyframes sequenciaFrase {
+    0% {
+        width: 0;
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateX(240px);
+    }
+
+    65% {
+        width: 25ch;
+        opacity: 1;
+        transform: translateX(300px);
+    }
+
+    85% {
+        width: 25ch;
+        opacity: 1;
+        transform: translateX(350px);
+    }
+
+    100% {
+        width: 25ch;
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+}

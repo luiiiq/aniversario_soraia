@@ -62,7 +62,7 @@
     background-clip: text;
     color: transparent;
     font-family: var(--fonte-titulo);
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 3px;
     opacity: 0;
@@ -128,7 +128,7 @@
     transform: translate(278%, 160%);
 }
 
-.imagemExpansao {
+/* .imagemExpansao {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -144,7 +144,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+} */
+
+.imagemExpansao {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 20;
+    clip-path: circle(0% at 100% 100%);
+    transition: clip-path 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
 }
+
+.imagemExpansao img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .imagemExpansao.expandirImagem {
     clip-path: circle(150% at 100% 100%);
@@ -217,7 +238,7 @@
     }
 
     .animacao.final h2 {
-        font-size: 32px;
+        font-size: 2rem;
         letter-spacing: 2px;
     }
 
@@ -240,7 +261,7 @@
     }
 
     .animacao.final h2 {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 
     .animacao.final .bolinha {
@@ -258,7 +279,7 @@
     }
 
     .animacao.final h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .animacao.final .bolinha {
@@ -278,7 +299,7 @@
     }
 
     .animacao.final h2 {
-        font-size: 27px;
+        font-size: 1.6875rem;
     }
 
     .animacao.final .bolinha {

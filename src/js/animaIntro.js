@@ -18,10 +18,15 @@ export function animaIntro() {
 
                 setTimeout(() => {
                     imagemExpansao.classList.add("expandirImagem");
+
+                    setTimeout(() => {
+                        imagemExpansao.classList.add("iniciarFrase");
+                    }, 1200);
                 }, 1200);
 
             }, 1800);
         }
 
     }, { once: true });
+
 };
