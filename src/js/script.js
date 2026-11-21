@@ -1,3 +1,3 @@
-import { animaIntro } from "./animaIntro.js";
+// import { animaIntro } from "./animaIntro.js";
 
-animaIntro();
+// animaIntro();
