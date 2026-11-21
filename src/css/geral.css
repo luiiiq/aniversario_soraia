@@ -1,0 +1,23 @@
+:root {
+    --bg-animacao: linear-gradient(#080808, #262626, #303030);
+    --cor-preto-medio: #262626;
+    --cor-preto-forte: #161616;
+    --cor-branco-medio: #F3F4F6;
+    --cor-branco-claro: #E8EAEF;
+    --cor-titulo: linear-gradient(#595A5C 0%, #F3F4F6 50%,#595A5C 100%);
+    --bg-principal: linear-gradient(#353535 0%, #080808 100%);
+
+    --fonte-texto: "Poppins", sans-serif;
+    --fonte-titulo: "Cinzel Decorative", Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
