@@ -1,5 +1,5 @@
 .informaçõesReencontro {
-    display: none;
+    /* display: none; */
 }
 
 /* ! Seção 1 */
@@ -669,4 +669,53 @@ header nav ul li::after {
         left: 50%;
         transform: translate(-50%, -50%);
     } 
+}
+
+/* ! Button */
+@media (max-width: 1024px) {
+    .nossoTempo .controls {
+        position: relative;
+        z-index: 2;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .nossoTempo .cardsTempo {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nossoTempo {
+        padding: 5rem 25px;
+    }
+
+    .controls {
+        margin-bottom: 35px;
+    }
+
+    .controls button {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nossoTempo {
+        padding: 4rem 15px;
+    }
+
+    .controls {
+        margin-bottom: 25px;
+    }
+
+    .controls button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .cardsTempo {
+        margin-top: 10px;
+    }
 }
