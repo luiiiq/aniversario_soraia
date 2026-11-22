@@ -8,13 +8,31 @@ export function animaIntro() {
     const musicaFundo = document.querySelector("#musicaFundo");
     const btn = document.querySelector("#musica");
 
-    btn.addEventListener("pointerdown", () => {
+    let audioIniciado = false;
+    let tentandoReproduzir = false;
+
+    function iniciarAudio() {
+        if (audioIniciado || tentandoReproduzir) return;
+
+        tentandoReproduzir = true;
+
         musicaFundo.muted = false;
 
-        musicaFundo.play().catch((erro) => {
-            console.error("Erro ao reproduzir áudio:", erro);
-        });
-    }, { once: true });
+        musicaFundo.play()
+            .then(() => {
+                audioIniciado = true;
+            })
+            .catch((erro) => {
+                console.error("Erro ao reproduzir áudio:", erro);
+            })
+            .finally(() => {
+                tentandoReproduzir = false;
+            });
+    };
+
+    btn.addEventListener("pointerdown", iniciarAudio);
+    btn.addEventListener("touchstart", iniciarAudio);
+    btn.addEventListener("click", iniciarAudio);
 
     window.addEventListener("load", () => {
         animacao.classList.add("iniciar");
