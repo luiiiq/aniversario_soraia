@@ -7,6 +7,19 @@ export function animaIntro() {
     const informaçõesReencontro = document.querySelector(".informaçõesReencontro");
     const musicaFundo = document.querySelector("#musicaFundo");
 
+    let interacaoUsuario = false;
+
+    function liberarAudio() {
+        if (interacaoUsuario) return;
+
+        interacaoUsuario = true;
+
+        musicaFundo.play().catch(() => {});
+    };
+
+    document.addEventListener("click", liberarAudio);
+    document.addEventListener("touchstart", liberarAudio);
+
     window.addEventListener("load", () => {
         animacao.classList.add("iniciar");
     });
@@ -49,18 +62,9 @@ export function animaIntro() {
         informaçõesReencontro.style.display = "block";
 
         musicaFundo.currentTime = 0;
+        musicaFundo.muted = false;
 
-        musicaFundo.play().catch(() => {
-            const iniciarMusica = () => {
-                musicaFundo.play().catch(() => {});
-
-                document.removeEventListener("click", iniciarMusica);
-                document.removeEventListener("touchstart", iniciarMusica);
-            };
-
-            document.addEventListener("click", iniciarMusica);
-            document.addEventListener("touchstart", iniciarMusica);
-        });
+        musicaFundo.play().catch(() => {});
     });
 
 };
