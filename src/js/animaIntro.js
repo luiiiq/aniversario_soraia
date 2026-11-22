@@ -62,8 +62,6 @@ export function animaIntro() {
         informaçõesReencontro.style.display = "block";
 
         musicaFundo.currentTime = 0;
-        musicaFundo.muted = false;
-
         musicaFundo.play().catch(() => {});
     });
 
