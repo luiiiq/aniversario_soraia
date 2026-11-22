@@ -33,3 +33,8 @@ a {
 html {
     scroll-behavior: smooth;
 }
+
+::selection {
+    background: var(--cor-preto-forte);
+    color: var(--cor-branco-claro);
+}
