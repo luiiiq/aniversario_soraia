@@ -1,3 +1,5 @@
+import { audio } from "./audio.js";
+
 export function animaIntro() {
     const animacao = document.querySelector("#animacao");
     const abertura = document.querySelector(".abertura");
@@ -75,10 +77,7 @@ export function animaIntro() {
         videoIntro.style.display = "none";
         informaçõesReencontro.style.display = "block";
 
-        // musicaFundo.currentTime = 0;
-        // musicaFundo.muted = false;
-
-        // musicaFundo.play().catch(() => {});
+        audio();
     });
 
 };
