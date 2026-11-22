@@ -47,7 +47,20 @@ export function animaIntro() {
     videoIntro.addEventListener("ended", () => {
         videoIntro.style.display = "none";
         informaçõesReencontro.style.display = "block";
-        musicaFundo.play();
+
+        musicaFundo.currentTime = 0;
+
+        musicaFundo.play().catch(() => {
+            const iniciarMusica = () => {
+                musicaFundo.play().catch(() => {});
+
+                document.removeEventListener("click", iniciarMusica);
+                document.removeEventListener("touchstart", iniciarMusica);
+            };
+
+            document.addEventListener("click", iniciarMusica);
+            document.addEventListener("touchstart", iniciarMusica);
+        });
     });
 
 };
