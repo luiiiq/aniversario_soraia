@@ -6,19 +6,15 @@ export function animaIntro() {
     const videoIntro = document.querySelector(".videoIntro");
     const informaçõesReencontro = document.querySelector(".informaçõesReencontro");
     const musicaFundo = document.querySelector("#musicaFundo");
+    const btn = document.querySelector("#musica");
 
-    let interacaoUsuario = false;
+    btn.addEventListener("pointerdown", () => {
+        musicaFundo.muted = false;
 
-    function liberarAudio() {
-        if (interacaoUsuario) return;
-
-        interacaoUsuario = true;
-
-        musicaFundo.play().catch(() => {});
-    };
-
-    document.addEventListener("click", liberarAudio);
-    document.addEventListener("touchstart", liberarAudio);
+        musicaFundo.play().catch((erro) => {
+            console.error("Erro ao reproduzir áudio:", erro);
+        });
+    }, { once: true });
 
     window.addEventListener("load", () => {
         animacao.classList.add("iniciar");
@@ -61,10 +57,10 @@ export function animaIntro() {
         videoIntro.style.display = "none";
         informaçõesReencontro.style.display = "block";
 
-        musicaFundo.currentTime = 0;
-        musicaFundo.muted = false;
+        // musicaFundo.currentTime = 0;
+        // musicaFundo.muted = false;
 
-        musicaFundo.play().catch(() => {});
+        // musicaFundo.play().catch(() => {});
     });
 
 };
