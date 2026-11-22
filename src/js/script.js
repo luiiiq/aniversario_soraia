@@ -1,5 +1,5 @@
-// import { animaIntro } from "./animaIntro.js";
+import { animaIntro } from "./animaIntro.js";
 import { controlarCards } from "./reencontro.js";
 
-// animaIntro();
+animaIntro();
 controlarCards();
