@@ -10,11 +10,11 @@ export function animaIntro() {
     let interacaoUsuario = false;
 
     function liberarAudio() {
-        if (interacaoUsuario) return;
+        // if (interacaoUsuario) return;
 
         interacaoUsuario = true;
 
-        musicaFundo.play().catch(() => {});
+        // musicaFundo.play().catch(() => {});
     };
 
     document.addEventListener("click", liberarAudio);
@@ -61,10 +61,18 @@ export function animaIntro() {
         videoIntro.style.display = "none";
         informaçõesReencontro.style.display = "block";
 
-        musicaFundo.currentTime = 0;
-        musicaFundo.muted = false;
+        // musicaFundo.currentTime = 0;
+        // musicaFundo.muted = false;
 
-        musicaFundo.play().catch(() => {});
+        // musicaFundo.play().catch(() => {});
+        if (interacaoUsuario) {
+            musicaFundo.currentTime = 0;
+            musicaFundo.muted = false;
+
+            musicaFundo.play().catch((erro) => {
+                console.error("Erro ao reproduzir música:", erro);
+            });
+        }
     });
 
 };
