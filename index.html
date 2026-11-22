@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    <!-- <section class="abertura" aria-label="Introdução Animação">
+    <audio id="musicaFundo" loop>
+        <source src="./src/audio/tempoPerdido.mp3" type="audio/mpeg">
+    </audio>
+    <section class="abertura" aria-label="Introdução Animação">
         <div class="animacao" id="animacao">
             <div class="bolinha">
                 <img src="./src/assets/images/introAnimacao/imgAbertura.jpg" alt="Imagem estrelada">
@@ -39,19 +42,18 @@
             <source src="./src/videos/videoAnima.mp4" type="video/mp4">
             Seu navegador não suporta a reprodução de vídeos.
         </video>
-    </section> -->
+    </section>
 
     <article class="informaçõesReencontro" aria-label="Conteúdo principal">
-        <header>
-            <nav>
-                <ul>
-                    <li>REENCONTRO</li>
-                </ul>
-            </nav>
-        </header>
-
         <main>
             <section class="introReencontro" aria-label="Informações sobre a Data">
+                <header>
+                    <nav>
+                        <ul>
+                            <li>REENCONTRO</li>
+                        </ul>
+                    </nav>
+                </header>
                 <div class="navDataFesta">
                     <div class="data">
                         <div class="dataImg">
@@ -69,10 +71,47 @@
                 </div>
 
                 <div class="conteudoFesta">
-                    
+                    <div class="grupoCards">
+                        <div class="cards">
+                            <div class="card c6"><img src="./src/assets/images/reencontroIntro/imgSoraia-6.jpg" alt="Soraia-6"></div>
+                            <div class="card c5"><img src="./src/assets/images/reencontroIntro/imgSoraia-5.jpg" alt="Soraia-5"></div>
+                            <div class="card c4"><img src="./src/assets/images/reencontroIntro/imgSoraia-4.jpg" alt="Soraia-4"></div>
+                            <div class="card c3"><img src="./src/assets/images/reencontroIntro/imgSoraia-3.jpg" alt="Soraia-3"></div>
+                            <div class="card c2"><img src="./src/assets/images/reencontroIntro/imgSoraia-2.jpg" alt="Soraia-2"></div>
+                            <div class="card c1"><img src="./src/assets/images/reencontroIntro/imgSoraia-1.jpg" alt="Soraia-1"></div>
+                        </div>
+                        <a href="#nossoTempo" type="button">CLIQUE AQUI ↓ </a>
+                    </div>
+                    <div class="infoFesta">
+                        <h1>Venha Celebrar esse Dia Especial</h1>
+                        <p>Os melhores momentos merecem ser compartilhados. Prepare-se!</p>
+                        <div>SAVE THE DATE</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nossoTempo" id="nossoTempo" aria-label="Mémorias nosso Próprio Tempo">
+                <h2>Festa Temos<br> Nosso Próprio tempo</h2>
+                <div class="controls">
+                    <button id="botaoAbrir">CLIQUE PARA ABRIR</button>
+                </div>
+                <div class="cards cardsTempo">
+                    <div class="card c6 ct1"><img src="./src/assets/images/reencontroIntro/imgSoraia-6.jpg" alt="Soraia-6"></div>
+                    <div class="card c5 ct2"><img src="./src/assets/images/reencontroIntro/imgSoraia-5.jpg" alt="Soraia-5"></div>
+                    <div class="card c4 ct3"><img src="./src/assets/images/reencontroIntro/imgSoraia-4.jpg" alt="Soraia-4"></div>
+                    <div class="card c3 ct4"><img src="./src/assets/images/reencontroIntro/imgSoraia-3.jpg" alt="Soraia-3"></div>
+                    <div class="card c2 ct5"><img src="./src/assets/images/reencontroIntro/imgSoraia-2.jpg" alt="Soraia-2"></div>
+                    <div class="card c1 ct6"><img src="./src/assets/images/reencontroIntro/imgSoraia-1.jpg" alt="Soraia-1"></div>
                 </div>
             </section>
         </main>
+
+        <footer>
+            <div class="imagemTexto">
+                <img src="./src/assets/images/reencontroIntro/imgGuitarra.jpg" alt="Guitarra">
+                <span>Em breve convite oficial</span>
+            </div>
+        </footer>
     </article>
     <script type="module" src="./src/js/script.js"></script>
 </body>

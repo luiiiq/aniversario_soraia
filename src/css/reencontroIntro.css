@@ -1,0 +1,672 @@
+.informaçõesReencontro {
+    display: none;
+}
+
+/* ! Seção 1 */
+.introReencontro {
+    background: var(--bg-principal);
+    padding-bottom: 35px;
+}
+
+header {
+    padding: 15px 45px;
+    font-family: var(--fonte-texto);
+    color: var(--cor-branco-claro);
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animarHeader 1.5s ease;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-preto-forte);
+    padding: 15px 30px;
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header nav ul li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid var(--cor-branco-claro);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+header nav ul li::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid var(--cor-branco-claro);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.navDataFesta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    padding: 10px 55px;
+    font-family: var(--fonte-texto);
+    animation: animarnavDataFesta 1.5s ease;
+}
+
+.data, .anos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: var(--cor-branco-medio);
+}
+
+.data img, .anos img{
+    width: 70px;
+    height: 70px;
+}
+
+.data h3 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.data span {
+    font-size: 30px;
+}
+
+.anos span {
+    font-size: 23px;
+}
+
+/* ! cards config inicial */
+.cards {
+    position: relative;
+    width: 400px;
+    height: 350px;
+}
+
+.card {
+    width: 220px;
+    position: absolute;
+    margin-top: 2rem;
+    top: 0;
+    left: 50%;
+    transition: transform 0.5s cubic-bezier(.2, .9, .3, 1.2);
+}
+
+.card img {
+    border-radius: 30px;
+}
+
+/* Primeiro card */
+.card.c1 {
+    transform: rotate(10deg);
+}
+
+/* Segundo card */
+.cards .c2 {
+    left: 180px;
+}
+
+/* Terceiro card */
+.cards .c3 {
+    left: 140px;
+    top: 20px;
+    transform: rotate();
+}
+
+/* Quarto card */
+.cards .c4 {
+    transform: rotate(30deg);
+}
+
+/* Quinto card */
+.cards .c5 {
+    transform: rotate(35deg);
+}
+
+/* Sexto card */
+.cards .c6 {
+    transform: rotate(40deg);
+}
+/* ! */
+
+.conteudoFesta {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10rem;
+}
+
+.grupoCards {
+    grid-column: 1;
+    animation: animarnavGrupoCards 1.5s ease;
+}
+
+.infoFesta {
+    grid-column: 2;
+    animation: animarInfoFesta 1.5s ease;
+}
+
+.grupoCards a {
+    color: var(--cor-branco-claro);
+    background: var(--cor-preto-forte);
+    border: 3px solid var(--cor-preto-medio);
+    font-family: var(--fonte-texto);
+    padding: 15px 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 15px;
+    display: block;
+    margin: 15px auto 15px 170px;
+    animation: pulsar 1.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.infoFesta h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 60px;
+    font-weight: bold;
+    max-width: 50vw;
+    line-height: 1.2;
+    background: var(--cor-titulo);
+    background-clip: text;
+    color: transparent;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 10px;
+}
+
+.infoFesta p {
+    color: var(--cor-branco-claro);
+    font-family: var(--fonte-texto);
+    max-width: 40vw;
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.infoFesta div {
+    color: var(--cor-branco-medio);
+    font-family: var(--fonte-texto);
+    font-size: 23px;
+    font-weight: bold;
+    background: rgba(126, 129, 134, 0.2);
+    padding: 13px 40px;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    justify-self: center;
+    margin-top: 25px;
+}
+
+@keyframes animarHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animarnavDataFesta {
+    from {
+        opacity: 0;
+        transform: translateX(-230px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes animarnavGrupoCards {
+    from {
+        opacity: 0;
+        transform: translateX(-130px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes animarInfoFesta {
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* TABLET E NOTEBOOK PEQUENO */
+@media (max-width: 1024px) {
+
+    header nav {
+        width: 70%;
+    }
+
+    .navDataFesta {
+        padding: 10px 30px;
+        gap: 1.5rem;
+    }
+
+    .conteudoFesta {
+        grid-template-columns: 1fr 1.3fr;
+        gap: 3rem;
+        padding: 0 30px;
+    }
+
+    .cards {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+
+    .grupoCards a {
+        margin: 15px auto;
+    }
+
+    .infoFesta h1 {
+        font-size: 45px;
+        max-width: 100%;
+    }
+
+    .infoFesta p {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+}
+
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 25px;
+        font-size: 21px;
+    }
+
+    header nav {
+        width: 85%;
+    }
+
+    .navDataFesta {
+        justify-content: center;
+        padding: 15px 25px;
+        gap: 2rem;
+    }
+
+    .data img,
+    .anos img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .data h3 {
+        font-size: 23px;
+    }
+
+    .data span {
+        font-size: 25px;
+    }
+
+    .anos span {
+        font-size: 20px;
+    }
+
+    .conteudoFesta {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 20px;
+    }
+
+    .grupoCards {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+
+    .grupoCards a {
+        margin: 0 auto 25px;
+        font-size: 21px;
+    }
+
+    .infoFesta {
+        grid-column: 1;
+        text-align: center;
+    }
+
+    .infoFesta h1 {
+        font-size: 40px;
+        max-width: 100%;
+    }
+
+    .infoFesta p {
+        max-width: 100%;
+        font-size: 19px;
+    }
+
+    .infoFesta div {
+        font-size: 20px;
+    }
+
+    .card {
+        left: 20% !important;
+    }
+
+}
+
+
+/* CELULAR */
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    header nav {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    header nav ul li {
+        gap: 1rem;
+    }
+
+    .header nav ul li::before,
+    .header nav ul li::after {
+        width: 7px;
+        height: 7px;
+    }
+
+    .navDataFesta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 25px;
+        gap: 1.5rem;
+    }
+
+    .data,
+    .anos {
+        gap: 12px;
+    }
+
+    .data img,
+    .anos img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .data h3 {
+        font-size: 20px;
+    }
+
+    .data span {
+        font-size: 22px;
+    }
+
+    .anos span {
+        font-size: 18px;
+    }
+
+    .conteudoFesta {
+        padding: 10px 15px;
+        gap: 0;
+    }
+
+    .cards {
+        transform: scale(0.7);
+        transform-origin: top center;
+    }
+
+    .grupoCards a {
+        font-size: 17px;
+        padding: 12px 22px;
+        margin-top: -70px;
+    }
+
+    .infoFesta h1 {
+        font-size: 32px;
+    }
+
+    .infoFesta p {
+        font-size: 17px;
+    }
+
+    .infoFesta div {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+}
+
+@media(max-width: 440px) {
+    .infoFesta h1 {
+        font-size: 27px;
+        margin: 0 20px;
+    }
+    .grupoCards {
+        width: 100%;
+        overflow: hidden;
+    }
+    .cards {
+        width: 100%;
+        max-width: 100%;
+        transform: scale(0.7);
+        transform-origin: top center;
+    }
+}
+
+/* ! Seção 2 */
+.nossoTempo {
+    background: #e6e5e5;
+    padding: 7rem 55px;
+}
+
+.nossoTempo h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-preto-forte);
+    text-align: center;
+    font-size: 40px;
+    margin: 15px 0 30px 0;
+}
+
+/* Configuração inicial */
+.cardsTempo {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.cardsTempo .card {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: transform 1s cubic-bezier(.2, .9, .3, 1.2);
+}
+
+.cardsTempo .card img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.4s ease;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    animation: pulsar 1.5s ease-in-out infinite;
+    border: 2px solid var(--cor-preto-medio);
+    background: var(--bg-principal);
+    color: var(--cor-branco-claro);
+}
+
+.controls button:hover {
+    scale: 1.1;
+}
+
+/* 1 - Topo */
+.cardsTempo.aberto .ct6 {
+    transform: translate(-50%, -50%) translate(0, -180px) rotate(-15deg);
+}
+
+/* 2 - Superior direito */
+.cardsTempo.aberto .ct5 {
+    transform: translate(-50%, -50%) translate(155px, -90px) rotate(15deg);
+}
+
+/* 3 - Inferior direito */
+.cardsTempo.aberto .ct4 {
+    transform: translate(-50%, -50%) translate(155px, 90px) rotate(25deg);
+}
+
+/* 4 - Embaixo */
+.cardsTempo.aberto .ct3 {
+    transform: translate(-50%, -50%) translate(0, 180px) rotate(15deg);
+}
+
+/* 5 - Inferior esquerdo */
+.cardsTempo.aberto .ct2 {
+    transform: translate(-50%, -50%) translate(-155px, 90px) rotate(-15deg);
+}
+
+/* 6 - Superior esquerdo */
+.cardsTempo.aberto .ct1 {
+    transform: translate(-50%, -50%) translate(-155px, -90px) rotate(-25deg);
+}
+
+@media (max-width: 768px) {
+    .cardsTempo {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .cardsTempo .card {
+        left: 50% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nossoTempo {
+        padding: 5rem 55px;
+    }
+    .cardsTempo {
+        width: 100%;
+        height: 350px;
+    }
+
+    .cardsTempo .card {
+        width: 130px;
+        left: 50%;
+    }
+
+    .cardsTempo.aberto .ct6 {
+        transform: translate(-50%, -50%) translate(0, -120px) rotate(-15deg);
+    }
+
+    .cardsTempo.aberto .ct5 {
+        transform: translate(-50%, -50%) translate(104px, -60px) rotate(15deg);
+    }
+
+    .cardsTempo.aberto .ct4 {
+        transform: translate(-50%, -50%) translate(104px, 60px) rotate(25deg);
+    }
+
+    .cardsTempo.aberto .ct3 {
+        transform: translate(-50%, -50%) translate(0, 120px) rotate(15deg);
+    }
+
+    .cardsTempo.aberto .ct2 {
+        transform: translate(-50%, -50%) translate(-104px, 60px) rotate(-15deg);
+    }
+
+    .cardsTempo.aberto .ct1 {
+        transform: translate(-50%, -50%) translate(-104px, -60px) rotate(-25deg);
+    }
+}
+
+/* !Footer */
+.imagemTexto {
+    position: relative;
+    width: 100%;
+}
+
+.imagemTexto img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+}
+
+.imagemTexto span {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translate(-50%, -50%);
+    font-family: var(--fonte-texto);
+    color: var(--cor-branco-claro);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+   .imagemTexto span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+}
