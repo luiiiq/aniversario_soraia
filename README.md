@@ -1,6 +1,6 @@
 # Save The Date – Soraia
 
-Projeto desenvolvido para apresentar o **Save the Date da comemoração dos 50 anos da Soraia**, marcada para o dia **03 de abril de 2027**.
+Projeto desenvolvido para apresentar o **Save the Date da comemoração dos 50 anos da Soraia**.
 
 A página foi criada com uma proposta visual nostálgica, trazendo fotografias, animações, vídeo e música para transmitir a ideia de reencontro, boas lembranças e momentos especiais.
 
